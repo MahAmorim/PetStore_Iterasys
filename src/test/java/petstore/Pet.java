@@ -47,4 +47,24 @@ public class Pet {
                 .body("category.name", is("cat"))
                 .body("tags.name", contains("sta"));
     }
+
+    @Test(priority = 2)
+    public void consultarPet() {
+        String petId = "1974080145";
+
+        String token =
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri + "/" + petId)
+        .then()
+                .log().all().statusCode(200).body("name", is("Coffee"))
+                .body("category.name", is("cat"))
+                .body("status", is("available"))
+        .extract()
+                .path("category.name");
+                System.out.println("Token: " + token);
+
+    }
 }
