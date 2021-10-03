@@ -102,4 +102,19 @@ public class Pet {
                 .body("message", is(petId));
     }
 
+    @Test
+    public void consultarPetPorStatus() {
+        String status = "available";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+                .when()
+                .get(uri + "/findByStatus?status=" + status)
+                .then()
+                .log().all()
+                .statusCode(200)
+                .body("name[]", everyItem(equalTo("tommy")));
+
+    }
 }
