@@ -1,0 +1,30 @@
+# **SIMUULADO**
+-Para realizarmos uma requisição que inclui um registro via uma API, como por exemplo, cadastrar um produto, precisaremos do método:
+R: post
+
+-Para realizarmos uma requisição que exclui um registro via uma API, como por exemplo, remover um pedido, precisaremos do método:
+R: delete
+
+-Para realizarmos uma requisição que altera um registro via uma API, como por exemplo, modificar o e-mail de um cliente, precisaremos do método:
+R: put
+
+-Para realizarmos uma requisição que consulta um registro via uma API, como por exemplo, exibir o extrato de uma conta bancaria, precisaremos do método:
+R: get
+
+-Nas aulas, nosso script em REST-assured começava por uma palavra chave que indica o contexto, os pré-requisitos da requisição. Estamos falando do:
+R: given
+
+-Em um script REST-assured, essa palavra chave precede o método que vai definir se a requisição vai incluir, consultar, alterar ou excluir um registro via uma API. Estamos falando do:
+R: when
+
+-Em um script REST-assured, essa palavra chave precede as ações que irão analisar a resposta devolvida por uma API. Estamos falando do:
+R: then
+
+-Para configurar o formato do corpo da requisição de uma API REST o contentType deve ser definido como:
+R: application/json
+
+-Os 4 métodos mais comuns de uma requisição para uma API se assemelham as 4 operações também comuns que realizam uma inclusão, consulta, alteração e exclusão. A sigla dessa 4 operações forma uma sigla muito falada no mundo do Java, é o famoso:
+R: CRUD
+
+-Teste de API se aplica a qual nível da pirâmide de testes?
+R: Meio
