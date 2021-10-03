@@ -31,7 +31,7 @@ public class Pet {
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("db/pet_1.json");
 
-        //Sintaxe Gherkin: comunicação estruturada = Dado/Given - Quando/When - Então/Then
+        //Sintaxe Gherkin: comunicação estruturada = Dado/Given - Quando/When - Entao/Then
 
         given() // Dado
                 .contentType("application/json")
@@ -42,15 +42,15 @@ public class Pet {
         .then() // Então
                 .log().all()
                 .statusCode(200)
-                .body("name", is("Blue"))
+                .body("name", is("tommy"))
                 .body("status", is("available"))
-                .body("category.name", is("cat"))
-                .body("tags.name", contains("sta"));
+                .body("category.name", is("tommy"))
+                .body("tags.name", contains("tommy"));
     }
 
     @Test(priority = 2)
     public void consultarPet() {
-        String petId = "1974080145";
+        String petId = "1104";
 
         String token =
         given()
@@ -59,14 +59,15 @@ public class Pet {
         .when()
                 .get(uri + "/" + petId)
         .then()
-                .log().all().statusCode(200).body("name", is("Blue"))
-                .body("category.name", is("cat"))
+                .log().all().statusCode(200).body("name", is("tommy"))
+                .body("category.name", is("tommy"))
                 .body("status", is("available"))
         .extract()
                 .path("category.name");
                 System.out.println("Token: " + token);
 
     }
+
     @Test(priority = 3)
     public void alterarPet() throws IOException {
         String jsonBody = lerJson("db/pet_2.json");
@@ -75,12 +76,30 @@ public class Pet {
                 .contentType("application/json")
                 .log().all()
                 .body(jsonBody)
-                .when()
+        .when()
                 .put(uri)
-                .then()
+        .then()
                 .log().all()
                 .statusCode(200)
-                .body("name", is("Lord"))
-                .body("status", is("adopted"));
+                .body("name", is("Timmy"))
+                .body("status", is("sold"));
     }
+
+    @Test(priority = 4)
+    public void excluirPet() {
+        String petId = "1104";
+
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .delete(uri + "/" + petId)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("code", is(200))
+                .body("type", is("unknown"))
+                .body("message", is(petId));
+    }
+
 }

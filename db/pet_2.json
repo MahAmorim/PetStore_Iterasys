@@ -1,18 +1,18 @@
 {
-  "id": 1797197318,
+  "id": 121999888,
   "category": {
-    "id": 2,
-    "name": "dog"
+    "id": 121,
+    "name": "Fox Hound"
   },
-  "name": "Lord",
+  "name": "Timmy",
   "photoUrls": [
-    "string"
+    "www.somethingSpot.com"
   ],
   "tags": [
     {
-      "id": 2021,
-      "name": "sta"
+      "id": 988,
+      "name": "white"
     }
   ],
-  "status": "adopted"
+  "status": "sold"
 }

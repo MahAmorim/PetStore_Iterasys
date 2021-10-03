@@ -1,17 +1,17 @@
 {
-  "id": 1974080145,
+  "id": 1104,
   "category": {
-    "id": 1,
-    "name": "cat"
+    "id": 1104,
+    "name": "tommy"
   },
-  "name": "Blue",
+  "name": "tommy",
   "photoUrls": [
     "string"
   ],
   "tags": [
     {
-      "id": 2021,
-      "name": "sta"
+      "id": 1104,
+      "name": "tommy"
     }
   ],
   "status": "available"
