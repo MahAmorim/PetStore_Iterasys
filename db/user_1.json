@@ -1,0 +1,10 @@
+{
+  "id": 555,
+  "username": "user1",
+  "firstName": "meno",
+  "lastName": "priezvisko",
+  "email": "email@qbsw.sk",
+  "password": "abcd",
+  "phone": "+421",
+  "userStatus": 0
+}
