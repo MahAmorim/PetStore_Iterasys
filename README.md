@@ -2,6 +2,11 @@
 
 Criação de projeto durante a **semana do teste de API 2021 da Iterasys (STA 2021)**.
 
+Foram realizados testes nos segmentos de:
+- [x] PETS
+- [x] STORE
+- [x] USER
+
 #### Para acessar o curso:
 
 - Entre pelo [Site Iterasys](https://iterasys.com.br/)
@@ -24,8 +29,3 @@ Criação de projeto durante a **semana do teste de API 2021 da Iterasys (STA 20
 
 - API: [`Swagger UI`](https://petstore.swagger.io/#/pet)
 
-
-### Relatótio final dos resultados dos testes executados:
-
-
-![Test results](https://github.com/MahAmorim/PetStore_Iterasys/blob/master/Resultado_Testes/captura.png?raw=true)
