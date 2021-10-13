@@ -8,6 +8,7 @@ import static org.testng.reporters.Files.readFile;
 public class Util {
 
     public static String readJson(String path) {
+
         String jsonData = null;
         {
             try {

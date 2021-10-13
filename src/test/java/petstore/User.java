@@ -15,7 +15,7 @@ import static org.hamcrest.Matchers.is;
 public class User {
     String uri = "https://petstore.swagger.io/v2/user";
 
-    @Test(priority = 1) // Anotação que identifica o teste
+    @Test(priority = 1)
     public String lerJson(String caminhoJson) throws IOException {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
